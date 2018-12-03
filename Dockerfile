@@ -17,7 +17,7 @@ RUN "date"
 # Install the available extensions
 # Sockets is for AMQP RabitMQ ?
 # SOAP validation VAT Number
-RUN docker-php-ext-install sockets pdo pdo_mysql intl soap
+RUN docker-php-ext-install pdo_mysql intl opcache sockets soap
 
 # Configure short open tag for Symfony
 RUN echo "short_open_tag = Off" >> /usr/local/etc/php/php.ini
