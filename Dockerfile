@@ -26,7 +26,5 @@ RUN usermod -u 1000 www-data
 
 # Supervisor
 RUN mkdir -p /var/log/supervisor
-COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD supervisord -c /etc/supervisor/conf.d/supervisord.conf
 
 WORKDIR /var/www/html
