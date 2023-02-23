@@ -12,7 +12,7 @@ RUN ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime && echo Europe/Paris >
 RUN "date"
 
 # Install the available extensions
-# Sockets is for AMQP RabitMQ ?
+# Sockets is for AMQP RabitMQ?
 # SOAP validation VAT Number
 RUN docker-php-ext-install pdo_mysql intl opcache sockets soap zip
 
