@@ -1,4 +1,4 @@
-FROM php:8.3-fpm
+FROM php:8.4-fpm
 
 RUN apt-get update && apt-get install -y openssl git libxml2-dev zlib1g-dev libicu-dev libzip-dev g++ unzip php*-mbstring php*-mcrypt supervisor
 
