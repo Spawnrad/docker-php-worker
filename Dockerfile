@@ -16,6 +16,11 @@ RUN "date"
 # SOAP validation VAT Number
 RUN docker-php-ext-install pdo_mysql intl opcache sockets soap zip
 
+# GD (redimensionnement des images de posts a l'upload)
+RUN apt-get update && apt-get install -y libpng-dev libjpeg62-turbo-dev libfreetype6-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd
+
 RUN usermod -u 1000 www-data 
 
 # Supervisor
